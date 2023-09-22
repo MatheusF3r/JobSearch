@@ -25,13 +25,16 @@ def busca_vaga(nome_vaga):
     info_vagas['Cargo'] = resultado.find('h3', class_="base-search-card__title").text.strip()
     info_vagas['Local'] = resultado.find('span', class_="job-search-card__location").text.strip()
     info_vagas['Abertura'] = resultado.find('time').text.strip()
-    #info_vagas['Abertura'] = resultado.find('time', class_="job-search-card__listdate").text.strip()
 
     lista_info_vagas.append(info_vagas)
 
   return lista_info_vagas
 
-cargo = ["atendimento", "B2C", "supervisor", "B2B", "vendedor", "customer%20experience", "customer%20success", "Analista%20de%20BackOffice", "coordenador"]
+cargo = ["atendimento", "B2C",
+         "supervisor", "B2B",
+         "vendedor", "customer%20experience",
+         "customer%20success", "Analista%20de%20BackOffice",
+         "coordenador"]
 
 #dados para planilha
 plan = {'Empresa':[],
